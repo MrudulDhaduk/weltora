@@ -1,5 +1,5 @@
 "use client";
-
+import '../globals.css';
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import Lottie from "lottie-react";
@@ -52,8 +52,11 @@ export default function ContactForm() {
 
   return (
     <div
-      className="min-h-screen flex items-center justify-center bg-black bg-opacity-90"
-      style={{ position: "relative" }}
+      className="min-h-screen flex items-center justify-center"
+      style={{
+        position: "relative",
+        backgroundColor: "black !important",  // force black background
+      }}
     >
       {/* Lottie animation as background */}
       <div
@@ -76,11 +79,11 @@ export default function ContactForm() {
           rendererSettings={{
             preserveAspectRatio: "xMidYMid slice",
           }}
-          // Reverse the animation by controlling speed & direction:
-          // Lottie-react doesn't have direct reverse prop,
-          // but you can try playing segments in reverse,
-          // or play normally and flip container vertically:
-          // We'll flip container vertically:
+        // Reverse the animation by controlling speed & direction:
+        // Lottie-react doesn't have direct reverse prop,
+        // but you can try playing segments in reverse,
+        // or play normally and flip container vertically:
+        // We'll flip container vertically:
         />
       </div>
 
